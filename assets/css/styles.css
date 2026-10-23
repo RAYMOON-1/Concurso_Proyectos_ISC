@@ -1,0 +1,356 @@
+/* ==========================================================================
+   1. VARIABLES CSS (Paleta institucional y tipografía)
+   ========================================================================== */
+
+:root {
+    --primary-color: #003366;
+    /* Azul institucional ISC */
+    --primary-hover: #002244;
+    --secondary-color: #00a896;
+    /* Verde tecnológico */
+    --accent-color: #f77f00;
+    /* Naranja de contraste */
+    --bg-color: #f8f9fa;
+    /* Fondo modo claro */
+    --surface-color: #ffffff;
+    /* Tarjetas modo claro */
+    --text-color: #2b2d42;
+    /* Texto modo claro */
+    --text-muted: #6c757d;
+    --border-color: #e9ecef;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-radius: 8px;
+}
+
+
+/* Variables para Modo Oscuro */
+
+body.dark-mode {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #f8f9fa;
+    --text-muted: #adb5bd;
+    --border-color: #333333;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==========================================================================
+   2. REINICIO Y ESTILOS BASE (Mobile-First)
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ==========================================================================
+   3. ENCABEZADO Y NAVEGACIÓN
+   ========================================================================== */
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--surface-color);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: var(--transition);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: var(--secondary-color);
+    outline: 2px solid var(--secondary-color);
+}
+
+.theme-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--border-color);
+}
+
+
+/* ==========================================================================
+   4. SECCIONES Y CONTENEDORES
+   ========================================================================== */
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+section,
+aside {
+    background-color: var(--surface-color);
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: var(--secondary-color);
+}
+
+
+/* Hero Section / Contador */
+
+.hero-section {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+}
+
+.hero-section h1,
+.hero-section h2 {
+    color: #ffffff !important;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--border-radius);
+    min-width: 75px;
+    backdrop-filter: blur(5px);
+}
+
+.time-box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+/* Grillas con CSS Grid */
+
+.about-grid,
+.categories-grid,
+.judges-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+
+/* Tarjetas y Microinteracciones */
+
+.about-card,
+.category-card,
+.judge-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.category-card:hover,
+.judge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Filtros */
+
+.filter-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--border-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+
+/* Botones */
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #d66c00;
+    transform: translateY(-2px);
+}
+
+
+/* Formulario */
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: 2px solid var(--secondary-color);
+    border-color: transparent;
+}
+
+.error-message {
+    color: #d90429;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+    display: block;
+}
+
+
+/* Pie de Página */
+
+.main-footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   5. MEDIA QUERIES (Escritorio y Tablets)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    .about-grid,
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .judges-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
