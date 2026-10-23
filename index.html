@@ -4,98 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concurso de Proyectos ISC | Ingeniería en Sistemas Computacionales</title>
+    <title>XX Concurso de Proyectos de Innovación</title>
 
-    <!-- SEO Básico -->
-    <meta name="description" content="Evento anual de presentación y concurso de proyectos de la carrera de Ingeniería en Sistemas Computacionales (ISC).">
-    <meta name="keywords" content="Concurso de Proyectos, ISC, Ingeniería en Sistemas, Tecnología, Innovación, Proyectos Universitarios">
-    <meta name="author" content="Carrera de ISC">
+    <!-- SEO y Open Graph -->
+    <meta name="description" content="Un espacio académico para mostrar creatividad, tecnología e impacto social en la carrera de ISC.">
+    <meta name="keywords" content="Concurso de Proyectos, Innovacion, ISC, TecMM, Zapopan">
 
-    <!-- Open Graph (Metadatos para redes sociales y mensajería) -->
-    <meta property="og:title" content="Concurso de Proyectos ISC">
-    <meta property="og:description" content="Descubre e inscríbete en el evento anual de proyectos tecnológicos de ISC.">
+    <meta property="og:title" content="XX Concurso de Proyectos de Innovación">
+    <meta property="og:description" content="Un espacio académico para mostrar creatividad, tecnología e impacto social.">
     <meta property="og:image" content="assets/img/banner.png">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_MX">
 
-    <!-- Estilos CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/UF.png" type="image/png">
+    <!-- Favicon Oficial -->
+    <link rel="icon" href="assets/img/logotsj.png" type="image/png">
 </head>
 
 <body>
 
-    <!-- Encabezado de Navegación Semántico -->
+    <!-- Encabezado de Navegación (Ancho Completo) -->
     <header class="main-header">
         <div class="header-container">
             <a href="#inicio" class="logo-link">
-                <img src="assets/img/UF.png" alt="Logo de la Universidad / ISC" class="logo-img">
+                <img src="assets/img/logotsj.png" alt="Logo Instituto Tecnológico" class="logo-img">
+                <span class="logo-text">Concurso de Proyectos de Innovación</span>
             </a>
 
             <nav class="main-nav" aria-label="Navegación principal">
                 <ul class="nav-list">
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#evento">El Evento</a></li>
+                    <li><a href="#bienvenida">Bienvenida</a></li>
+                    <li><a href="#programa">Programa</a></li>
                     <li><a href="#categorias">Categorías</a></li>
-                    <li><a href="#jueces">Jueces</a></li>
                     <li><a href="#registro">Registro</a></li>
-                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </nav>
 
-            <!-- Selector de Tema (Modo Claro / Modo Oscuro) -->
-            <button id="theme-toggle" class="theme-btn" aria-label="Cambiar entre modo claro y oscuro">
-                🌙
-            </button>
+            <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">🌙</button>
         </div>
     </header>
 
-    <!-- Contenido Principal -->
+    <!-- Banner Hero a Ancho Completo (Como la página original) -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>XX Concurso de Proyectos de Innovación</h1>
+            <p>Un espacio académico para mostrar creatividad, tecnología e impacto social.</p>
+            <a href="#programa" class="btn btn-accent">Ver programa</a>
+        </div>
+    </section>
+
+    <!-- Contador Regresivo Morado/Fucsia a Ancho Completo -->
+    <section class="countdown-section">
+        <div class="countdown-container">
+            <h2>El evento comienza en:</h2>
+            <div id="countdown" class="countdown-timer">
+                <div class="time-box"><span id="days">00</span><small>Días</small></div>
+                <div class="time-box"><span id="hours">00</span><small>Horas</small></div>
+                <div class="time-box"><span id="minutes">00</span><small>Minutos</small></div>
+                <div class="time-box"><span id="seconds">00</span><small>Segundos</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenedor Principal Centrado -->
     <main id="main-content">
 
-        <!-- Sección de Bienvenida / Banner -->
-        <section id="inicio" class="hero-section">
-            <div class="hero-content">
-                <h1>Concurso de Proyectos ISC</h1>
-                <p>Innovación, desarrollo tecnológico y talento universitario en acción.</p>
-
-                <!-- Contador Regresivo Dinámico -->
-                <div class="countdown-container" aria-live="polite">
-                    <h2>Tiempo restante para el evento:</h2>
-                    <div id="countdown" class="countdown-timer">
-                        <div class="time-box"><span id="days">00</span><small>Días</small></div>
-                        <div class="time-box"><span id="hours">00</span><small>Horas</small></div>
-                        <div class="time-box"><span id="minutes">00</span><small>Minutos</small></div>
-                        <div class="time-box"><span id="seconds">00</span><small>Segundos</small></div>
-                    </div>
-                </div>
-
-                <a href="#registro" class="btn btn-primary">Inscribir Proyecto</a>
-            </div>
-        </section>
-
-        <!-- Sección de Información del Evento -->
-        <section id="evento" class="about-section">
-            <h2>Acerca del Concurso</h2>
+        <!-- Bienvenida -->
+        <section id="bienvenida" class="about-section">
+            <h2>Bienvenidas y Bienvenidos</h2>
+            <p class="section-desc">Evento académico semestral que promueve la innovación, la vinculación y el aprendizaje basado en proyectos.</p>
             <div class="about-grid">
                 <article class="about-card">
-                    <h3>¿Qué es el evento?</h3>
-                    <p>Un espacio donde los estudiantes de Ingeniería en Sistemas Computacionales demuestran sus competencias en desarrollo de software, hardware, inteligencia artificial y más.</p>
+                    <h3>Soluciones tecnológicas</h3>
+                    <p>El Concurso de Proyectos de Innovación reúne a estudiantes, docentes y sector productivo para presentar soluciones tecnológicas a problemáticas reales.</p>
                 </article>
                 <article class="about-card">
-                    <h3>Objetivo</h3>
-                    <p>Fomentar la investigación aplicada, el trabajo en equipo y la resolución de problemas reales mediante soluciones tecnológicas.</p>
+                    <h3>Nuestra Misión</h3>
+                    <p>Fomentar la creatividad, el trabajo colaborativo y la retroalimentación experta preparando a los futuros Ingenieros en Sistemas.</p>
                 </article>
             </div>
         </section>
 
-        <!-- Sección Interactiva: Categorías de Proyectos -->
+        <!-- Categorías -->
         <section id="categorias" class="categories-section">
             <h2>Categorías de Participación</h2>
-
-            <!-- Filtros de Búsqueda/Semestre (Dinámico mediante JS) -->
             <div class="filter-controls">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="web">Desarrollo Web</button>
@@ -105,52 +100,30 @@
 
             <div class="categories-grid">
                 <article class="category-card" data-category="web">
-                    <img src="assets/img/galeria/g1.png" alt="Proyectos de Desarrollo Web" loading="lazy">
+                    <div class="card-img-container">
+                        <img src="assets/img/galeria/g1.png" alt="Proyectos Web" loading="lazy">
+                    </div>
                     <h3>Desarrollo Web y Cloud</h3>
-                    <p>Aplicaciones modernas, servicios en la nube y arquitecturas escalables.</p>
+                    <p>Aplicaciones modernas y servicios en la nube.</p>
                 </article>
                 <article class="category-card" data-category="mobile">
-                    <img src="assets/img/galeria/g2.png" alt="Proyectos de Aplicaciones Móviles" loading="lazy">
+                    <div class="card-img-container">
+                        <img src="assets/img/galeria/g2.png" alt="Proyectos Móviles" loading="lazy">
+                    </div>
                     <h3>Aplicaciones Móviles</h3>
-                    <p>Soluciones multiplataforma para Android e iOS enfocado en UX/UI.</p>
+                    <p>Soluciones móviles para Android e iOS.</p>
                 </article>
                 <article class="category-card" data-category="ia">
-                    <img src="assets/img/galeria/g3.png" alt="Proyectos de Inteligencia Artificial" loading="lazy">
+                    <div class="card-img-container">
+                        <img src="assets/img/galeria/g3.png" alt="Proyectos de Inteligencia Artificial" loading="lazy">
+                    </div>
                     <h3>Inteligencia Artificial</h3>
-                    <p>Modelos de aprendizaje automático, visión por computadora y análisis de datos.</p>
+                    <p>Modelos de aprendizaje automático y análisis de datos.</p>
                 </article>
             </div>
         </section>
 
-        <!-- Sección del Panel de Jueces -->
-        <section id="jueces" class="judges-section">
-            <h2>Panel de Jueces y Evaluadores</h2>
-            <div class="judges-grid">
-                <article class="judge-card">
-                    <img src="assets/img/c0rd1.png" alt="Fotografía del Juez Evaluador" class="judge-img" loading="lazy">
-                    <h3>Comité Evaluador</h3>
-                    <p class="judge-role">Docentes y Expertos de la Industria</p>
-                    <p>Encargados de evaluar la innovación, arquitectura y viabilidad técnica de las propuestas.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Sección interactiva: Preguntas Frecuentes (Acordeón) -->
-        <section id="faq" class="faq-section">
-            <h2>Preguntas Frecuentes</h2>
-            <div class="faq-accordion">
-                <details class="faq-item">
-                    <summary>¿Quiénes pueden participar?</summary>
-                    <p>Todos los estudiantes activos de la carrera de Ingeniería en Sistemas Computacionales.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>¿Cuántos integrantes puede tener un equipo?</summary>
-                    <p>Los equipos pueden estar conformados por un mínimo de 2 y un máximo de 5 integrantes.</p>
-                </details>
-            </div>
-        </section>
-
-        <!-- Formulario de Registro con Validación -->
+        <!-- Formulario -->
         <section id="registro" class="registration-section">
             <h2>Registro de Proyectos</h2>
             <form id="register-form" class="form" novalidate>
@@ -162,7 +135,7 @@
 
                 <div class="form-group">
                     <label for="correo">Correo Institucional:</label>
-                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@instituto.edu.mx">
+                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@zapopan.tecmm.edu.mx">
                     <span class="error-message" id="error-correo"></span>
                 </div>
 
@@ -183,31 +156,29 @@
                     <span class="error-message" id="error-categoria"></span>
                 </div>
 
-                <button type="submit" class="btn btn-submit">Enviar Registro</button>
+                <button type="submit" class="btn btn-accent">Enviar Registro</button>
                 <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
             </form>
         </section>
 
-        <!-- Barra Lateral con Recursos/Ubicación -->
+        <!-- Ubicación de la Sede -->
         <aside class="sidebar-info">
-            <h2>Ubicación del Evento</h2>
-            <p>Laboratorios de la Carrera de ISC</p>
-            <img src="assets/img/labs-ubicacion.jpg" alt="Mapa o fotografía del Laboratorio de ISC" loading="lazy">
+            <h2>Sede del Evento</h2>
+            <p>Unidad Académica Zapopan – Edificio L</p>
+            <div class="sidebar-img-container">
+                <img src="assets/img/labs-ubicacion.jpg" alt="Mapa de la sede del evento" loading="lazy">
+            </div>
         </aside>
 
     </main>
 
-    <!-- Pie de Página Semántico -->
+    <!-- Pie de página -->
     <footer class="main-footer">
         <div class="footer-container">
-            <p>&copy; Concurso de Proyectos - Ingeniería en Sistemas Computacionales.</p>
-            <ul class="footer-links">
-                <li><a href="assets/pdf/convocatoria.pdf" target="_blank" rel="noopener">Descargar Convocatoria (PDF)</a></li>
-            </ul>
+            <p>&copy; 2026 Instituto Tecnológico José Mario Molina Pasquel y Henríquez - Unidad Académica Zapopan.</p>
         </div>
     </footer>
 
-    <!-- Scripts JavaScript -->
     <script src="assets/js/main.js"></script>
 </body>
 
